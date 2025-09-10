@@ -2,7 +2,7 @@
 ======================================
 
 Giriş
-Siz de biliyorsunuz ki iklim değişikliği artık dünya için büyük bir sorun. Ben de bunun için bir bilgilendirici web sayfası oluşturdum. Şimdi Size web sayfamı göstereceğim.
+Siz de biliyorsunuz ki iklim değişikliği artık dünya için büyük bir sorun. Ben de bunun için bir bilgilendirici web sayfası oluşturdum. Şimdi size web sayfamı göstereceğim.
 
 İklim360; iklim değişikliği hakkında hızlı, güvenilir ve eyleme dönük bilgi sunan hafif bir web sitesidir. Basit HTML/CSS/JS mimarisi ile hızlı açılır, erişilebilirlik ilkelerine dikkat eder ve kullanıcıyı somut adımlara yönlendirir. ✨
 

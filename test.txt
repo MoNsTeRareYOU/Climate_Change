@@ -1,0 +1,12 @@
+İklim360 — Kısa Manuel Test Soruları
+------------------------------------
+
+- Butona tıklayınca görünüm açık/koyu oluyor ve sayfayı yenileyince seçiminiz korunuyor mu?
+- Dahili linke tıklayınca mevcut sayfa kısaca solup kayboluyor, yeni sayfa yumuşakça beliriyor mu?
+- Seçenekleri değiştirince sonuç anında (emojili) güncelleniyor mu?
+- Kartın üzerine gelince hafif yükselme ve gölge artışı görülüyor mu?
+- Tab ile dolaşınca odak halkası görünür ve “İçeriğe geç” sizi #icerik bölümüne götürüyor mu?
+- Sayfa kaynağında favicon ve OG/meta etiketleri mevcut mu?
+- Network panelinde `assets/` altındaki görsellere istek/404 çıkmıyor mu?
+- İlk yükleme ve sayfalar arası geçişler akıcı mı (takılma yok mu)?
+- Hem açık hem koyu temada metin ve bağlantılar yeterli kontrasta sahip mi?
