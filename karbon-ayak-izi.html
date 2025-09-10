@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Basit karbon ayak izi hesaplayıcı ile yıllık emisyon tahmininizi görün." />
+    <meta property="og:title" content="Karbon Ayak İzi | İklim360" />
+    <meta property="og:description" content="Elektrik, doğalgaz, ulaşım ve beslenme verilerine göre yaklaşık CO2e hesaplama." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Karbon Ayak İzi | İklim360</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="is-loading">
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <a href="index.html" class="logo" aria-label="Anasayfa">İklim360 🌍</a>
+          <button class="theme-toggle" aria-label="Tema değiştir">🌞</button>
+        </div>
+        <nav aria-label="Ana menü">
+          <button class="nav-toggle" aria-controls="ana-menu" aria-expanded="false">Menü</button>
+          <ul id="ana-menu" class="menu">
+            <li><a href="index.html#nedir">Nedir? ❓</a></li>
+            <li><a href="neden-onemli.html">Neden Önemli? ❗️</a></li>
+            <li><a href="etkiler.html">Etkiler 🌪️</a></li>
+            <li><a href="cozumler.html">Çözümler 🌱</a></li>
+            <li><a href="karbon-ayak-izi.html">Karbon Ayak İzi 🦶</a></li>
+            <li><a href="kaynaklar.html">Kaynaklar 📚</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="icerik" class="section reveal">
+      <div class="container">
+        <h1 class="gradient-text">Karbon Ayak İzi 🦶🌿</h1>
+        
+        <p class="lead">Bireylerin, kurumların ve ürünlerin neden olduğu sera gazı emisyonlarının toplamı.</p>
+        <p>
+          Bu sayfadaki mini hesaplayıcı, günlük tercihlerinizin yaklaşık etkisini görselleştirir. Değerler
+          ülkeden ülkeye değişebileceği için sonuçlar <em>yaklaşık</em> kabul edilmelidir; amaç farkındalık kazandırmaktır. 🎯
+        </p>
+        
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Enerji Kullanımı</h3>
+            <p>Elektrik, ısınma/soğutma ve cihazlar önemli emisyon kaynaklarıdır.</p>
+          </article>
+          <article class="card">
+            <h3>Ulaşım</h3>
+            <p>Uçak, otomobil ve lojistik kaynaklı emisyonları azaltmak için sürdürülebilir seçenekleri tercih edin.</p>
+          </article>
+          <article class="card">
+            <h3>Tüketim Alışkanlıkları</h3>
+            <p>Yiyecek, tekstil ve elektronik tüketimi; üretim ve tedarik zinciri emisyonlarını etkiler.</p>
+          </article>
+        </div>
+        <h2>Mini Hesaplayıcı 🧮</h2>
+        <form id="cf-calc" class="form card" style="max-width:720px;">
+          <div class="form-row">
+            <label for="cf-people">👨‍👩‍👧‍👦 Evde kişi sayısı</label>
+            <select id="cf-people">
+              <option value="1">1 👤</option>
+              <option value="2">2 👥</option>
+              <option value="3.5" selected>3–4 👨‍👩‍👧</option>
+              <option value="5">5+ 👨‍👩‍👧‍👦</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cf-home">🏠 Ev enerji kullanımı</label>
+            <select id="cf-home">
+              <option value="low">Düşük (tasarruflu)</option>
+              <option value="med" selected>Orta</option>
+              <option value="high">Yüksek</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cf-transport">🧭 Günlük ulaşım</label>
+            <select id="cf-transport">
+              <option value="walk">🚶‍♀️/🚲 Çoğunlukla yürüyüş/bisiklet</option>
+              <option value="transit" selected>🚌 Genellikle toplu taşıma</option>
+              <option value="car_low">🚗 Araç (az)</option>
+              <option value="car_high">🚗💨 Araç (çok)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cf-flights">✈️ Uçuş sıklığı (yılda)</label>
+            <select id="cf-flights">
+              <option value="none" selected>Yok</option>
+              <option value="few">1–2</option>
+              <option value="some">3–5</option>
+              <option value="many">6+</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cf-diet">🍽️ Beslenme tercihi</label>
+            <select id="cf-diet">
+              <option value="vegan">🥦 Vegan</option>
+              <option value="vejetaryen">🧀 Vejetaryen</option>
+              <option value="normal" selected>🍽️ Karışık/Normal</option>
+              <option value="et">🍖 Et ağırlıklı</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cf-shop">🛍️ Alışveriş/Tüketim</label>
+            <select id="cf-shop">
+              <option value="low">Az alırım</option>
+              <option value="med" selected>Orta</option>
+              <option value="high">Sık alışveriş yaparım</option>
+            </select>
+          </div>
+          <p class="form-status" data-out></p>
+          <p class="muted">ℹ️ Sonuç yaklaşık bir tahmindir; yaşam tarzına ve koşullara göre değişir.</p>
+        </form>
+
+        <h2>Sonucu Nasıl Yorumlamalı? 🧭</h2>
+        <ul class="list-check">
+          <li><strong>≤ 2 ton/yıl:</strong> Harika! Çoğu kişi için iddialı bir hedef. 🌿</li>
+          <li><strong>2–4 ton/yıl:</strong> İyi yoldasınız; ulaşım ve beslenmede ufak dokunuşlar etkili olur. 🌱</li>
+          <li><strong>4–7 ton/yıl:</strong> Enerji, ulaşım ve uçuşları gözden geçirmek faydalı. 🔍</li>
+          <li><strong>7+ ton/yıl:</strong> Büyük etki alanları var; önceliklendirme planı oluşturun. 🚀</li>
+        </ul>
+
+        <h2>Azaltma Önerileri 💡</h2>
+        <ul class="list-check">
+          <li>Enerji verimliliğini artırın; LED aydınlatma ve A+++ cihazlar kullanın.</li>
+          <li>Yenilenebilir enerjiye geçin veya yeşil tarife tercih edin.</li>
+          <li>Kısa mesafelerde yürüyün/bisiklet kullanın, toplu taşımayı önceliklendirin.</li>
+          <li>Gıda israfını azaltın, bitki ağırlıklı beslenmeyi artırın.</li>
+          <li>Gereksiz tüketimden kaçının; onarın, yeniden kullanın, geri dönüştürün.</li>
+        </ul>
+
+        <h2>Kategorilere Göre Öneriler 🧩</h2>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>🏠 Ev Enerjisi</h3>
+            <p>Yalıtımı iyileştirin, ısı ayarını optimize edin, verimli cihazlar kullanın; gereksiz bekleme tüketimini azaltın.</p>
+          </article>
+          <article class="card">
+            <h3>🧭 Ulaşım</h3>
+            <p>Kısa mesafeleri yürüyün/bisiklete binin; hat planlamasını kontrol ederek toplu taşımayı tercih edin.</p>
+          </article>
+          <article class="card">
+            <h3>✈️ Uçuşlar</h3>
+            <p>Uçuşları birleştirin, mümkünse tren/otobüs düşünün; iş seyahatlerinde çevrim içi toplantıları artırın.</p>
+          </article>
+        </div>
+        <div class="grid cols-3" style="margin-top:1rem">
+          <article class="card">
+            <h3>🍽️ Beslenme</h3>
+            <p>Bitki ağırlıklı menüler ve mevsimsel/yerel tercihler; gıda israfını azaltma ile birlikte büyük etki sağlar.</p>
+          </article>
+          <article class="card">
+            <h3>🛍️ Tüketim</h3>
+            <p>Onar, yeniden kullan, paylaş; satın alırken kalite ve uzun ömür kriterlerini öne çıkar.</p>
+          </article>
+          <article class="card">
+            <h3>📈 Takip</h3>
+            <p>Enerji ve ulaşım verilerinizi aylık takip edin; küçük iyileştirmeler toplamda büyük fark yaratır.</p>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer reveal">
+      <div class="container">
+        <p>© <span id="yil"></span> İklim360</p>
+      </div>
+    </footer>
+    <button id="to-top" aria-label="Yukarı dön">⬆︎</button>
+    <script src="script.js" defer></script>
+  </body>
+  </html>
