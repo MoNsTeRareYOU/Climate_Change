@@ -16,7 +16,6 @@ Neler Sunar?
 
 Hızlı Başlangıç
 - Gereksinim: Python 3 (yerel sunucu için)
-- Çalıştır: `python main.py` → `http://127.0.0.1:8000/` 🚀
 - Alternatif: `index.html` dosyasını doğrudan tarayıcıda açabilirsiniz.
 
 Proje Yapısı
